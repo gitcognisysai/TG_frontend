@@ -1,0 +1,29 @@
+// {
+//   "compilerOptions": {
+//     "baseUrl": ".",
+//     "jsx": "react-jsx",
+//     "ignoreDeprecations": "6.0",
+//     "paths": {
+//       "@/*": ["src/*"]
+//     }
+//   },
+//   "include": [
+//     "src"
+//   ]
+// }
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "jsx": "react-jsx",
+    "checkJs": false, // ✅ ADD THIS
+    // "ignoreDeprecations": "6.0",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    }
+  },
+  "include": [
+    "src"
+  ]
+}
