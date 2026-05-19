@@ -1,7 +1,7 @@
 // API Client to communicate with the Express/Python Backend
 // const API_BASE_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000/api";
 const API_BASE_URL =
-  import.meta.env.VITE_BACKEND_URL || "http://13.126.222.211:5000/api";
+  import.meta.env.VITE_BACKEND_URL || ""https://api.tgecetwp.in/api";
 
 console.log("API_BASE_URL:", API_BASE_URL);
 
