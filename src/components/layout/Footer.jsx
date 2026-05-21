@@ -409,7 +409,7 @@ This website has been launched to provide the candidates and public-at-large, in
                 <li className="flex items-center gap-3">
                   <Phone className="w-4 h-4 text-secondary shrink-0" />
 
-                  <span>+91 8179979584</span>
+                  <span>+91 8331997314</span>
                 </li>
 
                 <li className="flex items-center gap-3">
