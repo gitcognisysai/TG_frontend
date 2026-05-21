@@ -11,7 +11,7 @@ const NAV_LINKS = [
   { href: "/syllabus", label: "Syllabus" },
   { href: "/courses", label: "Courses" },
   { href: "/contact", label: "Contact" },
-  { href: "/faq", label: "FAQ" },
+  // { href: "/faq", label: "FAQ" },
 ];
 
 export default function Navbar() {

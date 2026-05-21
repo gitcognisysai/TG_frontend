@@ -10,9 +10,9 @@ export default function TopContactStrip() {
             <Phone className="w-3 h-3" />
             <span>Helpline: +91 8331997314</span>
           </a>
-          <a href="mailto:support@pgcet.ts.gov.in" className="flex items-center gap-1.5 hover:text-secondary transition-colors">
+          <a href="mailto:support@tgecet.ts.gov.in" className="flex items-center gap-1.5 hover:text-secondary transition-colors">
             <Mail className="w-3 h-3" />
-            <span>support@pgcet.ts.gov.in</span>
+            <span>support@tgecet.ts.gov.in</span>
           </a>
         </div>
         <div className="flex items-center gap-4">

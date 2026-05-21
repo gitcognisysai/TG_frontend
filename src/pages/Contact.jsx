@@ -19,17 +19,17 @@ export default function Contact() {
     {
       icon: MapPin,
       title: "Address",
-      desc: "TSCHE Office, Masab Tank, Hyderabad - 500028",
+      desc: "TG ECET (WP) - 2026,University College of Engineering,Osmania University, Hyderabad - 500007",
     },
     {
       icon: Phone,
       title: "Phone",
-      desc: "040-23146146\n040-23146147",
+      desc: "+91 8331997314",
     },
     {
       icon: Mail,
       title: "Email",
-      desc: "convener.pgcet@tsche.ac.in",
+      desc: "support@tgecet.ts.gov.in",
     },
     {
       icon: Clock,
@@ -117,19 +117,16 @@ export default function Contact() {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8 items-start">
-          <div className="relative w-full h-[500px] rounded-xl overflow-hidden border bg-muted/30">
-            <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#000_1px,transparent_1px)] [background-size:16px_16px]" />
-
-            <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
-              <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center animate-pulse mb-2">
-                <MapPin className="w-8 h-8 text-primary" />
-              </div>
-
-              <span className="font-serif font-bold text-xl text-primary bg-background/80 px-4 py-1 rounded backdrop-blur-sm border">
-                PGCET HQ
-              </span>
-            </div>
-          </div>
+         <div className="w-full h-[500px] rounded-xl overflow-hidden border">
+  <iframe
+    src="https://maps.google.com/maps?width=100%25&height=600&hl=en&q=College%20of%20Engineering%20Osmania%20University%20Hyderabad&t=&z=17&ie=UTF8&iwloc=B&output=embed"
+    width="100%"
+    height="100%"
+    style={{ border: 0 }}
+    allowFullScreen
+    loading="lazy"
+  ></iframe>
+</div>
 
           <div className="bg-card shadow-lg border border-gray-200 rounded-xl">
             <div className="p-8">
