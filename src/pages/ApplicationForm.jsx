@@ -140,21 +140,21 @@ export default function ApplicationForm() {
 
           <form onSubmit={handleSubmit}>
             <div className="grid md:grid-cols-4 gap-4">
-              <Input
+              {/* <Input
                 label="Payment Reference ID *"
                 name="paymentRef"
                 value={form.paymentRef}
                 onChange={handleChange}
                 placeholder="Enter Payment Reference ID"
-              />
+              /> */}
 
-              <Input
+              {/* <Input
                 label="Diploma Hall Ticket No. *"
                 name="hallTicket"
                 value={form.hallTicket}
                 onChange={handleChange}
                 placeholder="Enter Diploma Hall Ticket No."
-              />
+              /> */}
 
               <Input
                 label="Mobile Number *"

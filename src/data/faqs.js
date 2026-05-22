@@ -9,7 +9,7 @@ export const faqs = [
   {
     category: "Exam",
     questions: [
-      { q: "What is the mode of examination?", a: "The exam is conducted in Computer Based Test (CBT) mode only." },
+      { q: "What is the mode of examination?", a: "The test is conducted in Computer Based Test (CBT) mode only." },
       { q: "Is there any negative marking?", a: "No, there is no negative marking for incorrect answers." }
     ]
   },

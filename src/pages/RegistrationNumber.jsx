@@ -424,21 +424,21 @@ export default function RegistrationNumber() {
         <PageBox title="KNOW YOUR REGISTRATION NUMBER FOR TG ECET (WP) - 2026">
           <form onSubmit={handleSubmit}>
             <div className="grid md:grid-cols-4 gap-6">
-              <Input
+              {/* <Input
                 label="Payment Reference ID *"
                 name="paymentRef"
                 value={form.paymentRef}
                 onChange={handleChange}
                 placeholder="Enter Payment Reference ID"
-              />
+              /> */}
 
-              <Input
+              {/* <Input
                 label="Diploma Hall Ticket No *"
                 name="hallTicket"
                 value={form.hallTicket}
                 onChange={handleChange}
                 placeholder="Enter Diploma Hall Ticket No"
-              />
+              /> */}
 
               <Input
                 label="Mobile Number *"

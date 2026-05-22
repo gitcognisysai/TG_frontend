@@ -473,7 +473,7 @@ export default function PrintApplication() {
         />
 
         <div className="container mx-auto max-w-7xl py-12 px-4">
-          <PageBox title="PRINT TG ECET - 2026 APPLICATION FORM">
+          <PageBox title="PRINT TG ECET (WP) - 2026 APPLICATION FORM">
             <form onSubmit={handleSubmit}>
               <div className="grid md:grid-cols-3 gap-8">
                 <Input
@@ -484,21 +484,21 @@ export default function PrintApplication() {
                   placeholder="Enter Registration Number"
                 />
 
-                <Input
+                {/* <Input
                   label="Payment Reference ID *"
                   name="paymentRef"
                   value={form.paymentRef}
                   onChange={handleChange}
                   placeholder="Enter Payment Reference ID"
-                />
+                /> */}
 
-                <Input
+                {/* <Input
                   label="Diploma Hall Ticket No. *"
                   name="hallTicket"
                   value={form.hallTicket}
                   onChange={handleChange}
                   placeholder="Enter Hall Ticket Number"
-                />
+                /> */}
 
                 <Input
                   label="Mobile Number *"
@@ -542,7 +542,7 @@ export default function PrintApplication() {
           </div>
 
           <div className="print-area max-w-5xl mx-auto bg-white border-2 border-black p-5 text-[12px] mb-12">
-            <div className="text-center border-b-2 border-black pb-2 mb-2">
+            {/* <div className="text-center border-b-2 border-black pb-2 mb-2">
               <h1
                 style={{
                   fontFamily: "Arial, Helvetica, sans-serif",
@@ -555,7 +555,42 @@ export default function PrintApplication() {
               >
                 TG ECET(WP) - 2026 APPLICATION FORM
               </h1>
-            </div>
+            </div> */}
+            <div className="text-center border-b-2 border-black pb-3 mb-3">
+  <div className="flex items-center justify-between px-4">
+
+    {/* Left Logo */}
+    <img
+      src="/left-logo.png"
+      alt="Left Logo"
+      className="w-20 h-20 object-contain"
+    />
+
+    {/* Center Title */}
+    <div className="flex-1 text-center">
+      <h1
+        style={{
+          fontFamily: "Arial, Helvetica, sans-serif",
+          fontSize: "30px",
+          fontWeight: "700",
+          letterSpacing: "0px",
+          lineHeight: "1.2",
+          color: "#06254D",
+        }}
+      >
+        TG ECET(WP) - 2026 APPLICATION FORM
+      </h1>
+    </div>
+
+    {/* Right Logo */}
+    <img
+      src="/right-logo.png"
+      alt="Right Logo"
+      className="w-20 h-20 object-contain"
+    />
+
+  </div>
+</div>
 
             <div className="flex justify-between border-b border-black py-1 mb-3">
               <p>

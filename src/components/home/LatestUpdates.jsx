@@ -505,7 +505,7 @@ const APPLICATION = [
 const NEWS = [
   {
     text: "Commencement of Submission of Online Applications without late fee",
-    date: "10-05-2026",
+    date: "01-06-2026",
     color: "text-emerald-700",
   },
   {
@@ -514,13 +514,13 @@ const NEWS = [
     color: "text-[#06254D]",
   },
   {
-    text: "Payment of Registration Fee through Debit / Credit Card / Net Banking",
+    text: "Payment of Registration Fee through Debit / Credit Card / Net Banking (Registration fee of Rs.3000)",
     date: "",
     color: "text-[#06254D]",
   },
   {
     text: "Date of Examination",
-    date: "08-07-2026 to 12-07-2026",
+    date: "02-08-2026",
     color: "text-[#06254D]",
   },
 ];
@@ -528,29 +528,15 @@ const NEWS = [
 const FEE_SCHEDULE = [
   {
     label: "Last date for Submission of Online Application without late fee",
-    date: "10-06-2026",
+    date: "11-07-2026",
     amount: "",
   },
   {
-    label: "Last date with late fee of Rs. 250/-",
-    date: "17-06-2026",
-    amount: "Rs. 250/-",
+    label: "Last date with late fee of Rs. 1500 + Registration fee",
+    date: "21-07-2026",
+    amount: "",
   },
-  {
-    label: "Last date with late fee of Rs. 500/-",
-    date: "24-06-2026",
-    amount: "Rs. 500/-",
-  },
-  {
-    label: "Last date with late fee of Rs. 1000/-",
-    date: "30-06-2026",
-    amount: "Rs. 1000/-",
-  },
-  {
-    label: "Last date with late fee of Rs. 5000/-",
-    date: "05-07-2026",
-    amount: "Rs. 5000/-",
-  },
+  
 ];
 
 function ColumnHeader({ title }) {
@@ -665,12 +651,12 @@ export default function LatestUpdates() {
 
           <div className="flex-1 overflow-hidden py-2">
             <div className="whitespace-nowrap animate-[scroll-left_40s_linear_infinite] text-sm font-medium text-[#06254D]">
-              Online application portal opens 10-05-2026 &nbsp;•&nbsp; Last
-              date without late fee: 10-06-2026 &nbsp;•&nbsp; Late fee Rs.
-              5000/- valid till 05-07-2026 &nbsp;•&nbsp; Examination dates:
-              08-07-2026 to 12-07-2026 &nbsp;•&nbsp; Hall ticket download
-              begins: 01-07-2026 &nbsp;•&nbsp; Results announcement:
-              25-07-2026
+              Online application portal opens 01-06-2026 &nbsp;•&nbsp; Last
+              date without late fee: 11-07-2026 &nbsp;•&nbsp; Late fee Rs.
+              1500/- valid till 21-07-2026 &nbsp;•&nbsp; Examination dates:
+              02-08-2026 &nbsp;•&nbsp; Hall ticket download
+              begins: 27-07-2026 &nbsp;•&nbsp; Results announcement:
+              08-08-2026
             </div>
           </div>
         </div>

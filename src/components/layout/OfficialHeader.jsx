@@ -126,12 +126,13 @@ export default function OfficialHeader() {
     // color: "#1e0973",
   }}
 >
-  TG ECET Working Professionals-2026
+  TG ECET (Working Professionals)-2026
 </h1>
 
           <p className="text-sm md:text-base lg:text-lg text-[#06254D] mt-2">
             Telangana Common Entrance Test Conducted by Osmania University,
-            Hyderabad on behalf of Telangana  Council of Higher Education (TGCHE)
+            Hyderabad 
+            <p>on behalf of Telangana  Council of Higher Education (TGCHE)</p>
           </p>
         </div>
 

@@ -36,7 +36,7 @@ export default function Hero() {
 </h1>
 
         <p className="text-lg md:text-xl text-white mb-10 max-w-2xl mx-auto font-medium">
-         Gateway to B.E, B.Tech and Direct Admission into Second Year: Lateral Entry for Diploma Holders programmes for Working Professionals  across participating universities and affiliated colleges in Telangana.
+         Gateway to B.E./B.Tech. programmes for Working Professionals (Direct Admission into Second Year: Lateral Entry for Diploma Holders)
         </p>
       </motion.div>
     </div>

@@ -19,12 +19,12 @@
 
 
 export const importantDates = [
-  { event: "Issue of Notification", date: "06 Apr 2026", status: "completed" },
-  { event: "Start of Online Application", date: "09 Apr 2026", status: "active" },
-  { event: "Last Date without Late Fee", date: "20 May 2026", status: "upcoming" },
-  { event: "Last Date with Late Fee", date: "30 May 2026", status: "upcoming" },
-  { event: "Display of Eligible Candidates", date: "09 Jun 2026", status: "upcoming" },
-  { event: "CET Examination", date: "21 Jun 2026", status: "upcoming" },
-  { event: "Results Declaration", date: "30 Jun 2026", status: "upcoming" },
-  { event: "Counseling Phase-I", date: "2nd Week of Jul 2026", status: "upcoming" }
+  { event: "Issue of Notification", date: "28 May 2026(Thursday)", status: "upcoming" },//completed
+  { event: "Start of Online Application", date: "01 Jun 2026(Monday)", status: "upcoming" },
+  { event: "Last Date without Late Fee", date: "11 July 2026(Saturday)", status: "upcoming" },
+  { event: "Last Date with Late Fee", date: "21 July 2026(Tuesday)", status: "upcoming" },
+  { event: "Hall Ticket Download", date: "27 July 2026", status: "upcoming" },
+  { event: "CET Examination", date: "2 August 2026(Sunday)", status: "upcoming" },
+  { event: "Results Declaration", date: "8 Aug 2026(Saturday)", status: "upcoming" },
+  { event: "Counseling Phase-I", date: "3rd Week of August 2026", status: "upcoming" }
 ];

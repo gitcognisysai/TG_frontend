@@ -43,7 +43,7 @@ export default function AboutSection() {
 
             <div className="prose prose-lg prose-slate text-muted-foreground leading-relaxed text-justify">
               <p>
-                Telangana Engineering Common Entrance Test (TG ECET(WP)-2026) is conducted by Osmania University on behalf of TGCHE for lateral entry admissions into engineering and pharmacy programs.
+                Telangana Engineering Common Entrance Test (TG ECET(WP)-2026) is conducted by Osmania University on behalf of TGCHE for lateral entry admissions into engineering.
               </p>
 
               <p>
@@ -51,7 +51,7 @@ export default function AboutSection() {
               </p>
 
               <p>
-                The exam is conducted in online mode (CBT) ensuring transparency, speed, and efficiency in evaluation.
+                The test is conducted in online mode (CBT) ensuring transparency, speed, and efficiency in evaluation.
               </p>
             </div>
           </div>
