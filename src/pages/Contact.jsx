@@ -29,7 +29,7 @@ export default function Contact() {
     {
       icon: Mail,
       title: "Email",
-      desc: "support@tgecet.ts.gov.in",
+      desc: "supportecetwp@osmania.ac.in",
     },
     {
       icon: Clock,

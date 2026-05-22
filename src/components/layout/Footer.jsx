@@ -415,7 +415,7 @@ This website has been launched to provide the candidates and public-at-large, in
                 <li className="flex items-center gap-3">
                   <Mail className="w-4 h-4 text-secondary shrink-0" />
 
-                  <span>support@tgecet.ts.gov.in</span>
+                  <span>supportecetwp@osmania.ac.in</span>
                 </li>
               </ul>
 
@@ -478,7 +478,7 @@ This website has been launched to provide the candidates and public-at-large, in
               </button>
             </div>
 
-            <p className="text-secondary flex items-center gap-3">
+            {/* <p className="text-secondary flex items-center gap-3">
               Designed and developed by
 
               <span className="text-white flex items-center gap-1">
@@ -489,7 +489,25 @@ This website has been launched to provide the candidates and public-at-large, in
                 /> 
                 CognisysAi
               </span> 
-            </p>
+            </p> */}
+            <p className="text-secondary flex items-center gap-3">
+  Designed and developed by
+
+  <a
+    href="https://cognisysai.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-white flex items-center gap-1 hover:text-primary transition"
+  >
+    <img
+      src="/cognisysai.jpeg"
+      alt="CognisysAi Logo"
+      className="w-8 h-8 object-contain"
+    />
+
+    <span>CognisysAi</span>
+  </a>
+</p>
           </div>
           {/* <div className="text-center text-secondary mt-2">
           <span className="font-bold font-[30px]">CognisysAi</span>
