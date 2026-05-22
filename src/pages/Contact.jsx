@@ -143,7 +143,7 @@ export default function Contact() {
                     name="name"
                     value={form.name}
                     onChange={handleChange}
-                    placeholder="John Doe"
+                    placeholder="Full Name"
                     className={inputClass}
                   />
                   {errors.name && <p className={errorClass}>{errors.name}</p>}
@@ -158,7 +158,7 @@ export default function Contact() {
                     type="email"
                     value={form.email}
                     onChange={handleChange}
-                    placeholder="john@example.com"
+                    placeholder="Email Address"
                     className={inputClass}
                   />
                   {errors.email && <p className={errorClass}>{errors.email}</p>}
