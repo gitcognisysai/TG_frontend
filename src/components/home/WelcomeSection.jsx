@@ -69,7 +69,7 @@ export default function WelcomeSection() {
             </p>
 
             <p>
-              For lateral admission into 2nd year regular B.E/B.Tech Courses in both University and Private
+              For lateral entry admission into 2nd year regular B.E/B.Tech Courses in both University and Private
               Un-aided Professional Institutions (Minority &amp; Non-Minority) approved by All India Council for
               Technical Education (AICTE).
             </p>

@@ -563,7 +563,7 @@ export default function PrintApplication() {
     <img
       src="/left-logo.png"
       alt="Left Logo"
-      className="w-20 h-20 object-contain"
+      className="w-14 h-14 object-contain"
     />
 
     {/* Center Title */}
@@ -586,7 +586,7 @@ export default function PrintApplication() {
     <img
       src="/right-logo.png"
       alt="Right Logo"
-      className="w-20 h-20 object-contain"
+      className="w-14 h-14 object-contain"
     />
 
   </div>
@@ -716,7 +716,7 @@ export default function PrintApplication() {
               />
             </Table>
 
-            <div className="grid grid-cols-2 gap-3 mt-3">
+            <div className="grid grid-cols-2 gap-3 mt-2">
               <div>
                 <SectionTitle title="6. Address for Communication" />
                 <Table>
@@ -744,7 +744,7 @@ export default function PrintApplication() {
               </div>
             </div>
 
-            <div className="border border-black p-3 mt-4">
+            <div className="border border-black p-3 mt-2">
               <p className="font-bold mb-1">Declaration:</p>
               <p>
                 I declare that the details furnished above are true and correct

@@ -503,18 +503,18 @@ const APPLICATION = [
 ];
 
 const NEWS = [
-  {
-    text: "Commencement of Submission of Online Applications without late fee",
-    date: "01-06-2026",
-    color: "text-emerald-700",
-  },
+  // {
+  //   text: "Commencement of Submission of Online Applications without late fee",
+  //   date: "01-06-2026",
+  //   color: "text-emerald-700",
+  // },
   {
     text: "Application Forms will be accepted only Online",
     date: "",
     color: "text-[#06254D]",
   },
   {
-    text: "Payment of Registration Fee through Debit / Credit Card / Net Banking (Registration fee of Rs.3000)",
+    text: "Payment of Registration Fee (Rs. 3000) through Debit / Credit Card / Net Banking",
     date: "",
     color: "text-[#06254D]",
   },
