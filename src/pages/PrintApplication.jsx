@@ -354,13 +354,18 @@ import PageBanner from "@/components/layout/PageBanner";
 import { supabase } from "@/lib/supabaseClient";
 
 export default function PrintApplication() {
+  // const [form, setForm] = useState({
+  //   registrationNumber: "",
+  //   paymentRef: "",
+  //   hallTicket: "",
+  //   mobile: "",
+  //   dob: "",
+  // });
   const [form, setForm] = useState({
-    registrationNumber: "",
-    paymentRef: "",
-    hallTicket: "",
-    mobile: "",
-    dob: "",
-  });
+  registrationNumber: "",
+  mobile: "",
+  dob: "",
+});
 
   const [application, setApplication] = useState(null);
   const [payment, setPayment] = useState(null);
@@ -419,13 +424,18 @@ export default function PrintApplication() {
     setApplication(null);
     setPayment(null);
 
+    // if (
+    //   !form.registrationNumber ||
+    //   !form.paymentRef ||
+    //   !form.hallTicket ||
+    //   !form.mobile ||
+    //   !form.dob
+    // ) 
     if (
-      !form.registrationNumber ||
-      !form.paymentRef ||
-      !form.hallTicket ||
-      !form.mobile ||
-      !form.dob
-    ) {
+  !form.registrationNumber ||
+  !form.mobile ||
+  !form.dob
+){
       alert("Please fill all required fields");
       return;
     }
@@ -435,26 +445,39 @@ export default function PrintApplication() {
       return;
     }
 
+    // const { data: appData, error: appError } = await supabase
+    //   .from("applications")
+    //   .select("*")
+    //   .eq("registration_number", form.registrationNumber)
+    //   .eq("payment_reference_id", form.paymentRef)
+    //   .eq("hall_ticket_no", form.hallTicket)
+    //   .eq("mobile_number", form.mobile)
+    //   .eq("date_of_birth", form.dob)
+    //   .maybeSingle();
     const { data: appData, error: appError } = await supabase
-      .from("applications")
-      .select("*")
-      .eq("registration_number", form.registrationNumber)
-      .eq("payment_reference_id", form.paymentRef)
-      .eq("hall_ticket_no", form.hallTicket)
-      .eq("mobile_number", form.mobile)
-      .eq("date_of_birth", form.dob)
-      .maybeSingle();
+  .from("applications")
+  .select("*")
+  .eq("registration_number", form.registrationNumber)
+  .eq("mobile_number", form.mobile)
+  .eq("date_of_birth", form.dob)
+  .maybeSingle();
 
     if (appError || !appData) {
       alert("Application details not found");
       return;
     }
 
+    // const { data: paymentData } = await supabase
+    //   .from("fee_payments")
+    //   .select("*")
+    //   .eq("payment_reference_id", form.paymentRef)
+    //   .maybeSingle();
     const { data: paymentData } = await supabase
-      .from("fee_payments")
-      .select("*")
-      .eq("payment_reference_id", form.paymentRef)
-      .maybeSingle();
+  .from("fee_payments")
+  .select("*")
+  .eq("mobile_number", form.mobile)
+  .eq("date_of_birth", form.dob)
+  .maybeSingle();
 
     setApplication(appData);
     setPayment(paymentData);

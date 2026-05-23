@@ -67,35 +67,53 @@ export default function ApplicationForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!form.paymentRef || !form.hallTicket || !form.mobile || !form.dob) {
-      alert("Please fill all required fields");
-      return;
-    }
+    // if (!form.paymentRef || !form.hallTicket || !form.mobile || !form.dob) {
+    //   alert("Please fill all required fields");
+    //   return;
+    // }
+    if (!form.mobile || !form.dob) {
+  alert("Please fill all required fields");
+  return;
+}
 
     if (!isValidDOB(form.dob)) {
       alert("Please enter Date of Birth in dd/mm/yyyy format");
       return;
     }
 
-    const { data, error } = await supabase
-      .from("fee_payments")
-      .select("*")
-      .eq("payment_reference_id", form.paymentRef)
-      .eq("hall_ticket_no", form.hallTicket)
-      .eq("mobile_number", form.mobile)
-      .eq("date_of_birth", form.dob)
-      .maybeSingle();
+    // const { data, error } = await supabase
+    //   .from("fee_payments")
+    //   .select("*")
+    //   .eq("payment_reference_id", form.paymentRef)
+    //   .eq("hall_ticket_no", form.hallTicket)
+    //   .eq("mobile_number", form.mobile)
+    //   .eq("date_of_birth", form.dob)
+    //   .maybeSingle();
+   
+
+const { data, error } = await supabase
+  .from("fee_payments")
+  .select("*")
+  .eq("mobile_number", form.mobile)
+  // .eq("date_of_birth", formattedDOB)
+  .eq("date_of_birth", form.dob)
+  .maybeSingle();
 
     if (error || !data) {
       alert("Invalid details or fee payment not found");
       return;
     }
 
+    // const { data: existingApplication } = await supabase
+    //   .from("applications")
+    //   .select("*")
+    //   .eq("payment_reference_id", form.paymentRef)
+    //   .maybeSingle();
     const { data: existingApplication } = await supabase
-      .from("applications")
-      .select("*")
-      .eq("payment_reference_id", form.paymentRef)
-      .maybeSingle();
+  .from("applications")
+  .select("*")
+  .eq("mobile_number", form.mobile)
+  .maybeSingle();
 
     if (existingApplication) {
       alert(
@@ -105,15 +123,23 @@ export default function ApplicationForm() {
       return;
     }
 
+    // sessionStorage.setItem(
+    //   "verifiedPaymentData",
+    //   JSON.stringify({
+    //     paymentRef: form.paymentRef,
+    //     hallTicket: form.hallTicket,
+    //     mobile: form.mobile,
+    //     dob: form.dob,
+    //   })
+    // );
     sessionStorage.setItem(
-      "verifiedPaymentData",
-      JSON.stringify({
-        paymentRef: form.paymentRef,
-        hallTicket: form.hallTicket,
-        mobile: form.mobile,
-        dob: form.dob,
-      })
-    );
+  "verifiedPaymentData",
+  JSON.stringify({
+    mobile: form.mobile,
+    // dob: formattedDOB,
+    dob: form.dob,
+  })
+);
 
     navigate("/full-application");
   };

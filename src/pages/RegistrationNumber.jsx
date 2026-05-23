@@ -382,36 +382,68 @@ export default function RegistrationNumber() {
     }));
   };
 
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   setResult(null);
+
+  //   if (!form.paymentRef || !form.hallTicket || !form.mobile || !form.dob) {
+  //     alert("Please fill all required fields");
+  //     return;
+  //   }
+
+  //   if (!isValidDOB(form.dob)) {
+  //     alert("Please enter Date of Birth in dd/mm/yyyy format");
+  //     return;
+  //   }
+
+  //   const { data, error } = await supabase
+  //     .from("applications")
+  //     .select("*")
+  //     .eq("payment_reference_id", form.paymentRef)
+  //     .eq("hall_ticket_no", form.hallTicket)
+  //     .eq("mobile_number", form.mobile)
+  //     .eq("date_of_birth", form.dob)
+  //     .maybeSingle();
+
+  //   if (error || !data) {
+  //     alert("No registration found with given details");
+  //     return;
+  //   }
+
+  //   setResult(data);
+  // };
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    setResult(null);
+  e.preventDefault();
 
-    if (!form.paymentRef || !form.hallTicket || !form.mobile || !form.dob) {
-      alert("Please fill all required fields");
-      return;
-    }
+  setResult(null);
 
-    if (!isValidDOB(form.dob)) {
-      alert("Please enter Date of Birth in dd/mm/yyyy format");
-      return;
-    }
+  // VALIDATION
+  if (!form.mobile || !form.dob) {
+    alert("Please fill all required fields");
+    return;
+  }
 
-    const { data, error } = await supabase
-      .from("applications")
-      .select("*")
-      .eq("payment_reference_id", form.paymentRef)
-      .eq("hall_ticket_no", form.hallTicket)
-      .eq("mobile_number", form.mobile)
-      .eq("date_of_birth", form.dob)
-      .maybeSingle();
+  // DOB VALIDATION
+  if (!isValidDOB(form.dob)) {
+    alert("Please enter Date of Birth in dd/mm/yyyy format");
+    return;
+  }
 
-    if (error || !data) {
-      alert("No registration found with given details");
-      return;
-    }
+  // FETCH REGISTRATION
+  const { data, error } = await supabase
+    .from("applications")
+    .select("*")
+    .eq("mobile_number", form.mobile)
+    .eq("date_of_birth", form.dob)
+    .maybeSingle();
 
-    setResult(data);
-  };
+  if (error || !data) {
+    alert("No registration found with given details");
+    return;
+  }
+
+  setResult(data);
+};
 
   return (
     <SiteLayout>

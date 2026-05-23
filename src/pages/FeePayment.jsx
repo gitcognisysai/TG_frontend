@@ -279,28 +279,46 @@ export default function FeePayment() {
 
     try {
       // 1. Call the Express Backend to save the pending record and encrypt the request
-      const { data: encryptedRes, error: encryptError } = await api.payment.encryptRequest({
-        transactionId: paymentRef,
-        amount: amount,
-        returnUrl: `${window.location.origin}/payment-response`,
-        paymentDetails: {
-          qualifying_exam: form.qualifyingExam,
-          hall_ticket_no: form.hallTicketNo,
-          branch_diploma: form.branchDiploma,
-          branch_entrance: form.branchEntrance,
-          passing_year: form.passingYear,
-          candidate_name: form.candidateName,
-          date_of_birth: form.dob,
-          mobile_number: form.mobile,
-          alternate_mobile: form.alternateMobile,
-          email: form.email,
-          category: form.category,
-          ph_status: form.phStatus,
-          payment_mode: form.paymentMode,
-          payment_status: "PENDING",
-          sbiepay_transaction_id: paymentRef,
-        }
-      });
+      // const { data: encryptedRes, error: encryptError } = await api.payment.createPayment({
+      //   transactionId: paymentRef,
+      //   amount: amount,
+      //   returnUrl: `${window.location.origin}/payment-response`,
+      //   paymentDetails: {
+      //     qualifying_exam: form.qualifyingExam,
+      //     hall_ticket_no: form.hallTicketNo,
+      //     branch_diploma: form.branchDiploma,
+      //     branch_entrance: form.branchEntrance,
+      //     passing_year: form.passingYear,
+      //     candidate_name: form.candidateName,
+      //     date_of_birth: form.dob,
+      //     mobile_number: form.mobile,
+      //     alternate_mobile: form.alternateMobile,
+      //     email: form.email,
+      //     category: form.category,
+      //     ph_status: form.phStatus,
+      //     payment_mode: form.paymentMode,
+      //     payment_status: "PENDING",
+      //     sbiepay_transaction_id: paymentRef,
+      //   }
+      // });
+      const { data: encryptedRes, error: encryptError } =
+  await api.payment.createPayment({
+
+    qualifyingExam: form.qualifyingExam,
+    hallTicketNo: form.hallTicketNo,
+    branchDiploma: form.branchDiploma,
+    branchEntrance: form.branchEntrance,
+    passingYear: form.passingYear,
+    candidateName: form.candidateName,
+    dob: form.dob,
+    mobile: form.mobile,
+    alternateMobile: form.alternateMobile,
+    email: form.email,
+    category: form.category,
+    phStatus: form.phStatus,
+    paymentMode: form.paymentMode
+
+  });
 
       if (encryptError || !encryptedRes?.encryptedData) {
         throw new Error(encryptError?.message || "Failed to initialize payment request");

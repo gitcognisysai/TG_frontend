@@ -129,11 +129,21 @@ export default function OfficialHeader() {
   TG ECET (Working Professionals)-2026
 </h1>
 
-          <p className="text-sm md:text-base lg:text-lg text-[#06254D] mt-2">
+          {/* <p className="text-sm md:text-base lg:text-lg text-[#06254D] mt-2">
             Telangana Common Entrance Test Conducted by Osmania University,
             Hyderabad 
             <p>on behalf of Telangana  Council of Higher Education (TGCHE)</p>
-          </p>
+          </p> */}
+          <div className="text-sm md:text-base lg:text-lg text-[#06254D] mt-2">
+  <p>
+    Telangana Common Entrance Test Conducted by Osmania University,
+    Hyderabad
+  </p>
+
+  <p>
+    on behalf of Telangana Council of Higher Education (TGCHE)
+  </p>
+</div>
         </div>
 
         {/* RIGHT LOGO */}
