@@ -320,31 +320,92 @@ export default function FeePayment() {
 
   });
 
-      if (encryptError || !encryptedRes?.encryptedData) {
-        throw new Error(encryptError?.message || "Failed to initialize payment request");
-      }
+      // if (encryptError || !encryptedRes?.encryptedData) {
+      //   throw new Error(encryptError?.message || "Failed to initialize payment request");
+      // }
 
-      // 3. Create a hidden form and submit it to SBIePay
-      const sbiUrl = "https://test.sbiepay.sbi/secure/processBOReq.do"; // Use production URL for live
-      const formElement = document.createElement("form");
-      formElement.method = "POST";
-      formElement.action = sbiUrl;
+      // // 3. Create a hidden form and submit it to SBIePay
+      // const sbiUrl = "https://test.sbiepay.sbi/secure/processBOReq.do"; // Use production URL for live
+      // const formElement = document.createElement("form");
+      // formElement.method = "POST";
+      // formElement.action = sbiUrl;
 
-      const params = {
-        encryptTrans: encryptedRes.encryptedData,
-        merchId: encryptedRes.merchantId,
-      };
+      // const params = {
+      //   encryptTrans: encryptedRes.encryptedData,
+      //   merchId: encryptedRes.merchantId,
+      // };
 
-      for (const key in params) {
-        const input = document.createElement("input");
-        input.type = "hidden";
-        input.name = key;
-        input.value = params[key];
-        formElement.appendChild(input);
-      }
+      // for (const key in params) {
+      //   const input = document.createElement("input");
+      //   input.type = "hidden";
+      //   input.name = key;
+      //   input.value = params[key];
+      //   formElement.appendChild(input);
+      // }
 
-      document.body.appendChild(formElement);
-      formElement.submit();
+      // document.body.appendChild(formElement);
+      // formElement.submit();
+      if (encryptError) {
+
+  throw new Error(
+    encryptError?.message ||
+    "Failed to initialize payment request"
+  );
+
+}
+
+console.log("PAYMENT RESPONSE =>");
+console.log(encryptedRes);
+
+/*
+|--------------------------------------------------
+| REDIRECT TO SBI PAYMENT PAGE
+|--------------------------------------------------
+*/
+const transactionUrl =
+  encryptedRes?.sbiResponse?.data?.[0]?.transactionUrl;
+
+console.log(
+  "TRANSACTION URL =>",
+  transactionUrl
+);
+
+if (transactionUrl) {
+
+  window.location.href =
+    transactionUrl;
+
+}
+
+else {
+
+  console.log(
+    "FULL SBI RESPONSE =>",
+    encryptedRes
+  );
+
+  throw new Error(
+    "SBI transaction URL not received"
+  );
+
+}
+
+// if (
+//   encryptedRes?.transactionUrl
+// ) {
+
+//   window.location.href =
+//     encryptedRes.transactionUrl;
+
+// }
+
+// else {
+
+//   throw new Error(
+//     "SBI transaction URL not received"
+//   );
+
+// }
 
     } catch (err) {
       console.error("Payment Error:", err);
